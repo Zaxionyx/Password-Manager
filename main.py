@@ -10,19 +10,19 @@ def add_password(web, user, password):
         if len(password) < 5:
             print("The length of password is less than 5 characters.")
             continue
-        elif not any(char.lower() for char in password):
+        elif not any(char.islower() for char in password):
             print("Password does not include any lowercase letters")
             continue
         elif  not any(char in special_chars for char in password):
             print("Password does not include speical characters")
             continue
-        elif not any(str.isdigit() for char in password):
+        elif not any(char.isdigit() for char in password):
             print("Password does not include any number")
         else:
             print("Password is strong enough")
         break
 
-h
+
 
         
         
