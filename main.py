@@ -5,6 +5,7 @@ def add_password(web, user, password):
     url = f"{website}.com"
 
     user = input("Enter username: ")
+    special_chars = '!@#$%^&*()-+_=,'
     
     password = input("Enter password: ")
     while True:
