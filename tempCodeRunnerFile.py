@@ -4,9 +4,8 @@ def add_password(web, user, password):
     user = input("Enter username: ")
     special_chars = '!@#$%^&*()-+_=,'
 
-    
+    password = input("Enter password: ")
     while True:
-        password = input("Enter password: ")
         if len(password) < 5:
             print("The length of password is less than 5 characters.")
             continue
@@ -22,7 +21,7 @@ def add_password(web, user, password):
             print("Password is strong enough")
         break
 
-h
+    
 
         
         
