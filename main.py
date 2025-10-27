@@ -1,11 +1,24 @@
-def website():
-    website = input("Enter website name: ") 
-    url = f"{website}.com"
+# def website():
+#     website = input("Enter website name: ") 
+#     url = f"{website}.com"
+    
+
+def password_generator():
+    
+    choice = input("Would you like to generate a random password? ")
+    if choice == "yes":
+        return True
+        
+       
+    elif choice == "no":
+        return False
+    
+        
 
 
     
 def strength_password():
-    website()
+    generator_choice = password_generator()
     
     user = input("Enter username: ")
     special_chars = '!@#$%^&*()-+_=,'
@@ -36,6 +49,7 @@ def strength_password():
 
 
 strength_password()
+
 
 
 
