@@ -17,7 +17,11 @@ def password_generator():
         txt = response.read() # downloads the webpage data in bytes from the URL
         words = txt.decode().splitlines() #converts the bytes into readable texts then splits into one word
         random_word = ran.choice(words)
-        random
+        number = ran.randint(100,9999)
+        
+        print(random_word + str(number)) # A future edit I will find a way to randomly generate this instead of it being orderded
+
+
 
     
         
