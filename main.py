@@ -1,6 +1,6 @@
 #import numpy as np
-import random as ran
-#import secrets as sec
+#import random as ran
+import secrets as sec
 import string
  
 # def website():
@@ -8,19 +8,15 @@ import string
 #     url = f"{website}.com"
 
 def password_generator():
-    
-    random_string = ""
-    
     string_length = int(input("Random String Length: "))
     if string_length >= 5:
         characters = string.ascii_lowercase + string.ascii_uppercase + string.digits + string.punctuation 
-        random_string = ''.join(ran.choice(characters) for i in range(string_length))
+        random_string = ''.join(sec.choice(characters) for i in range(string_length))
         print(f"Generated Password String for the length of {string_length}: {random_string}")
      
 def strength_password():
     user = input("Enter username: ")
     special_chars = '!@#$%^&*()-+_=,'
-
     
     while True:
         password = input("Enter password: ")
