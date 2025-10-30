@@ -10,21 +10,14 @@ import string
 def password_generator():
     
     random_string = ""
-    while True:
-        choice = input("Do you want to generate a password? ")
-        if choice == "yes":
-            string_length = int(input("Random String Length: "))
-            if string_length >= 5:
-                possible_characters = input("Possible Characters: ")
-                random_string += ran.choice(possible_characters)
-                print(f"Generated password: {string_length, possible_characters}")
-                break
-        elif choice == "no":
-         return password_generator()             
-                   
-def strength_password():
-    generator_choice = password_generator()
     
+    string_length = int(input("Random String Length: "))
+    if string_length >= 5:
+        characters = string.ascii_lowercase + string.ascii_uppercase + string.digits + string.punctuation 
+        random_string = ''.join(ran.choice(characters) for i in range(string_length))
+        print(f"Generated Password String for the length of {string_length}: {random_string}")
+     
+def strength_password():
     user = input("Enter username: ")
     special_chars = '!@#$%^&*()-+_=,'
 
@@ -48,46 +41,11 @@ def strength_password():
         else:
             print("Password is strong enough")
         break
+    print(f" Username: {user} \n Password: {password}")
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-        
-        
-        
-        
-        
-
-      
-
-      
-        
-
-          
-    
+choice = input(("Welcome to password manager! \n This is where you can generate a strong password, Check your password strength, and many more to come! \n Input 1: Generate Password \n Input 2: Check Password Strength \n "))
+if choice == "1":
+     password_generator()
+elif choice == "2":
+     strength_password()
