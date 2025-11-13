@@ -1,11 +1,7 @@
-#import numpy as np
-#import random as ran
 import secrets as sec
 import string
  
-# def website():
-#     website = input("Enter website name: ") 
-#     url = f"{website}.com"
+
 
 def password_generator():
     string_length = int(input("Random String Length: "))
