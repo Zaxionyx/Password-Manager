@@ -32,6 +32,7 @@ def strength_password():
             print("Password does not include any number")
         else:
             print("Password is strong enough")
+            continue 
         break
     print(f" Username: {user} \n Password: {password}")
 
