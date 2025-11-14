@@ -6,7 +6,7 @@ import string
 def password_generator():
     string_length = int(input("Random String Length: "))
     if string_length >= 5:
-        characters = string.ascii_lowercase + string.ascii_uppercase + string.digits + string.punctuation 
+        characters = string.ascii_lowercase + string.ascii_uppercase + string.digits + string.punctuation + strings.digits
         random_string = ''.join(sec.choice(characters) for i in range(string_length))
         print(f"Generated Password String for the length of {string_length}: {random_string}")
      
