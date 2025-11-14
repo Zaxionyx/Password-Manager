@@ -1,17 +1,17 @@
 import secrets as sec
 import string
  
-
-
 def password_generator():
     string_length = int(input("Random String Length: "))
     if string_length >= 5:
-        characters = string.ascii_lowercase + string.ascii_uppercase + string.digits + string.punctuation + strings.digits
+        characters = string.ascii_lowercase + string.ascii_uppercase + string.digits + string.punctuation
         random_string = ''.join(sec.choice(characters) for i in range(string_length))
         print(f"Generated Password String for the length of {string_length}: {random_string}")
      
+
+    
 def strength_password():
-    user = input("Enter username: ")
+    
     special_chars = '!@#$%^&*()-+_=,'
     
     while True:
@@ -25,16 +25,16 @@ def strength_password():
         elif not any(char.islower() for char in password):
             print("Password does not include any lowercase letters")
             continue
-        elif  not any(char in special_chars for char in password):
-            print("Password does not include speical characters")
+        elif not any(char in special_chars for char in password):
+            print("Password does not include special characters")
             continue
         elif not any(char.isdigit() for char in password):
             print("Password does not include any number")
+            continue 
         else:
             print("Password is strong enough")
-            continue 
-        break
-    print(f" Username: {user} \n Password: {password}")
+            break  
+    print(f"Password: {password}")
 
 
 choice = input(("Welcome to password manager! \n This is where you can generate a strong password, Check your password strength, and many more to come! \n Input 1: Generate Password \n Input 2: Check Password Strength \n "))
